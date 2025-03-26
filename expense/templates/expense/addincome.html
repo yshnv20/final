@@ -1,0 +1,14 @@
+
+<html>
+    <head>
+        <title>expense tracker</title>
+    </head>
+    <body>
+        {% load crispy_forms_tags %}
+        <h1>Add Income</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type="submit">Add income</button>
+        </form>
+    </body>

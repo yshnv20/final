@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense List</title>
+</head>
+<body>
+    <h1>Expense List</h1>
+    <form method="get">
+        {{ myFilter.form }}
+        <button type="submit">Search</button>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Amount</th>
+            <th>Description</th>
+            <th>Date&Time</th>
+        </tr>
+        {% for expense in expenses %}
+        <tr>
+            <td>{{ expense.id }}</td>
+            <td>{{ expense.name }}</td>
+            <td>{{ expense.amount }}</td>
+            <td>{{ expense.description }}</td>
+            <td>{{ expense.datetime }}</td>
+           
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Income List</title>
+</head>
+<body>
+    <h1>Income List</h1>
+    <form method="get">
+        {{ myFilter.form }}
+        <button type="submit">Search</button>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Amount</th>
+            <th>Source</th>
+            <th>Date&Time</th>
+        </tr>
+        {% for income in incomes %}
+        <tr>
+            <td>{{ income.id }}</td>
+            <td>{{ income.amount }}</td>
+            <td>{{ income.source }}</td>
+            <td>{{ income.datetime }}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
